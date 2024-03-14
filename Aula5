@@ -1,0 +1,26 @@
+//EXERCÍCIO-1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num;
+    int result;
+    
+    cout<<"Digite um número inteiro: ";
+    cin >> num;
+    
+    result = num % 2;
+    
+    if (result == 0)
+    {
+      cout<<"O número digitado é PAR";  
+    }
+    else 
+    {
+        cout<<"O número digitado é ÍMPAR";
+    }
+    return 0;
+}
+
+//EXERCÍCIO-2
