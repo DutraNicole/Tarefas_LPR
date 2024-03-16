@@ -24,3 +24,28 @@ int main()
 }
 
 //EXERCÍCIO-2
+using System;
+class HelloWorld {
+  static void Main() {
+      
+    int result_01;
+    int result_02;
+    Console.WriteLine("Digite dois números: ");
+    int A = int.Parse(Console.ReadLine());
+    int B = int.Parse(Console.ReadLine());
+   
+    result_01 = A % B;
+    result_02= B % A;
+   
+   if (result_01 == 0 || result_02 == 0)
+   {
+       Console.WriteLine("Os números {0} e {1}, são multiplos! ", A, B);
+   }
+   else 
+  {
+      Console.WriteLine("Os números {0} e {1}, não são multiplos!", A,B);
+  }
+  }
+}
+
+//EXERCÍCIO-3
