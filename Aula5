@@ -49,3 +49,35 @@ class HelloWorld {
 }
 
 //EXERCÍCIO-3
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout<<"Selecione uma classe que você queira: "<<endl;
+    cout<<"1 - GUERREIRA"<<endl;
+    cout<<"2 - MAGO"<<endl;
+    cout<<"3 - ARQUEIRA"<<endl;
+    cin>>num;
+    
+    if (num == 1)
+    {
+        cout<<"Você escolheu a classe GUERREIRA."<<endl;
+        cout<<"Essas são suas habilidades especiais: Ataque Pesado, Defesa Total."<<endl;
+    }
+    else if (num == 2)
+    {
+        cout<<"Você escolheu a classe MAGO."<<endl;
+        cout<<"Essas são suas habilidades especiais: Bola de Fogo, Escudo de Gelo."<<endl;  
+    }
+    else if (num == 3)
+    {
+        cout<<"Você escolheu a classe ARQUEIRA."<<endl;
+        cout<<"Essas são suas habilidades especiais: Flecha Precisa, Disparo Triplo."<<endl;     
+    }
+    else 
+    {
+        cout<<"Número inválido!";
+    }
+    return 0;
+}
