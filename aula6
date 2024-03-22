@@ -1,1 +1,33 @@
+//EXERCÍCIO1
+#include <iostream>
+#include <vector>
 
+using namespace std;
+
+int main(){
+   cout<<"Informe a quantidade de números que deseja tirar a média: ";
+   int quantida_num;
+   cin>>quantida_num;
+   
+   vector<int> numeros;
+  
+   int contador = 0;
+   int soma_num = 0;
+   int quantidade_num = 0;
+    while (contador < quantida_num) {
+        int numero;
+        cout << "Digite o " << contador + 1 << "º número: ";
+        cin >> numero;
+        numeros.push_back(numero);
+        if (numero % 2 == 0) {
+        soma_num += numero;
+        quantidade_num++;
+    }
+    contador++;
+    }
+    float media_num = static_cast<float>(soma_num) / quantidade_num;
+    
+     cout << "A média desses números são: "<< media_num << endl;
+    
+    return 0;
+}
