@@ -87,3 +87,29 @@ int main()
     return 0;
 }
 
+//EXERCÍCIO4
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int Num;
+    int quadrado;
+    int soma_Digitos;
+    
+    do {
+    cout<<"Digite um número: "; 
+    cin>>Num;
+    }  while (Num <= 0);
+        quadrado = Num * Num;
+        soma_Digitos = 0;
+        int temp = quadrado;
+    do {
+        soma_Digitos += temp % 10;
+        temp /= 10;
+    } while (temp > 0);
+      cout<<"A soma dos números é: "<< soma_Digitos << endl;
+    
+    return 0;
+}
+
