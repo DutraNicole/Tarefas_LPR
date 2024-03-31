@@ -113,3 +113,32 @@ int main()
     return 0;
 }
 
+//EXERCÍCIO5
+using System;
+class HelloWorld {
+  static void Main() {
+    const int dias_semana = 5;
+    const double semana_mes = 4.5;
+    
+    int horas_por_dia;
+    
+    do
+    {
+        Console.Write("Jedi, indique suas horas treinadas: ");
+    } while (!int.TryParse(Console.ReadLine(), out horas_por_dia) || horas_por_dia <= 0);
+    
+    int total_horas_semana = 0;
+    for (int dia = 1; dia <= dias_semana; dia++);
+    {
+        total_horas_semana += horas_por_dia;
+    }
+    
+    double semanas_faltando = 1000.0 / total_horas_semana;
+    
+    double meses_faltando = semanas_faltando / semana_mes;
+    
+    Console.WriteLine("Total de horas treinadas em uma semana: " +total_horas_semana);
+    Console.WriteLine("Semanas necesárias para alcançar 1000 horas: " +semanas_faltando);
+    Console.WriteLine("Meses necesárias para alcançar 1000 horas: " +meses_faltando);
+  }
+}
