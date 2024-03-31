@@ -31,3 +31,31 @@ int main(){
     
     return 0;
 }
+//EXERCÍCIO2
+using System;
+class HelloWorld {
+  static void Main() {
+       Random numAleatorio = new Random();
+       int valorInteiro;
+       int Num;
+    do
+    {
+     Console.WriteLine("Digite um número aleatório entre 1 e 100: ");
+     Num = int.Parse(Console.ReadLine());
+     
+      valorInteiro = numAleatorio.Next(1,100);
+     
+         
+        if (Num == valorInteiro)
+        {
+            Console.WriteLine("Parabéns! Você acertou o número!");
+            Console.WriteLine("O número aleatório era: {0}", valorInteiro);
+        } 
+        else
+        {
+            Console.WriteLine("Não foi dessa vez! tente novamente.");
+        }
+    }
+    while(Num != valorInteiro);
+  }
+}
