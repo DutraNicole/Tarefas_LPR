@@ -1,1 +1,23 @@
+//exercício1
+#include <iostream>
+using namespace std;
 
+int Numreverso(int num) {
+    int numReversifcado = 0;
+    while (num != 0) {
+        numReversifcado = numReversifcado * 10 + num % 10;
+        num /= 10;
+    }
+    return numReversifcado;
+}
+
+int main()
+{
+    int num;
+    cout<<"Digite um número inteiro: "<<endl;
+    cin>>num;
+    int reverso = Numreverso(num);
+    cout<<"O reverso do número é: "<<reverso<<endl;
+ 
+    return 0;
+}
