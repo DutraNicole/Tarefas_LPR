@@ -21,3 +21,102 @@ int main()
  
     return 0;
 }
+
+//exercício2
+#include <iostream>
+#include <vector>
+using namespace std;
+
+static void ex1(){
+   cout<<"Informe a quantidade de números que deseja tirar a média: ";
+   int quantida_num;
+   cin>>quantida_num;
+   
+   vector<int> numeros;
+  
+   int contador = 0;
+   int soma_num = 0;
+   int quantidade_num = 0;
+    while (contador < quantida_num) {
+        int numero;
+        cout << "Digite o " << contador + 1 << "º número: ";
+        cin >> numero;
+        numeros.push_back(numero);
+        if (numero % 2 == 0) {
+        soma_num += numero;
+        quantidade_num++;
+    }
+    contador++;
+    }
+    float media_num = static_cast<float>(soma_num) / quantidade_num;
+    
+     cout << "A média desses números são: "<< media_num << endl;
+    
+}
+static void ex3(){
+    int soma = 0;
+    
+    for(int i = 50; i <= 500; i++) 
+    {
+        if (i % 2 != 0 && i % 3 == 0)
+        {
+            soma += i;
+            cout<<"A soma dos números ímpares múltiplos de 3 entre 50 e 500 é igual a: "<< soma << endl; 
+        }
+    }
+}
+static void ex4()
+{
+    int Num;
+    int quadrado;
+    int soma_Digitos;
+    
+    do {
+    cout<<"Digite um número: "; 
+    cin>>Num;
+    }  while (Num <= 0);
+        quadrado = Num * Num;
+        soma_Digitos = 0;
+        int temp = quadrado;
+    do {
+        soma_Digitos += temp % 10;
+        temp /= 10;
+    } while (temp > 0);
+      cout<<"A soma dos números é: "<< soma_Digitos << endl;
+}
+
+int main()
+{
+   int escolha;
+   cout<<"Qual exercício você deseja ver?(digite números)\r\n 1-exercício 1\r\n 2-exercício 3\r\n 3-exercício 4"<<endl;
+   cin>>escolha;
+   if (escolha == 1){
+       ex1();
+   }
+   else if (escolha == 2){
+       ex3();
+   }
+   else if (escolha == 3){
+       ex4();
+   }
+    return 0;
+}
+
+//exercício3
+using System;
+class HelloWorld {
+  static string cadastrarHeroi(){
+    Console.WriteLine("Insira o nome de um herói da Marvel:");
+    string nome = Console.ReadLine();
+    Console.WriteLine("Insira o poder dese herói:");
+    string poder = Console.ReadLine();
+    Console.WriteLine("Insira a pontuação do herói:");
+    int pontos = int.Parse(Console.ReadLine());
+    
+    return nome;
+}
+
+  static void Main() {
+    cadastrarHeroi();
+  }
+}
