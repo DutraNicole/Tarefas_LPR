@@ -103,20 +103,4 @@ int main()
 }
 
 //exercício3
-using System;
-class HelloWorld {
-  static string cadastrarHeroi(){
-    Console.WriteLine("Insira o nome de um herói da Marvel:");
-    string nome = Console.ReadLine();
-    Console.WriteLine("Insira o poder dese herói:");
-    string poder = Console.ReadLine();
-    Console.WriteLine("Insira a pontuação do herói:");
-    int pontos = int.Parse(Console.ReadLine());
-    
-    return nome;
-}
-
-  static void Main() {
-    cadastrarHeroi();
-  }
-}
+não consegui terminar ;-;
