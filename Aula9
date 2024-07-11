@@ -1,1 +1,158 @@
+using System;
+ public struct cadastrarHeroi{
+ public string nome;
+ public string poder;
+ public int pontuacao;
+ } 
 
+class HelloWorld {
+    static cadastrarHeroi[] Heroi = new cadastrarHeroi[5];
+  static void Main() {
+        Menu();
+      }
+        
+        static void Menu()
+    {
+        bool exit = false;
+        while (!exit)
+        {
+            Console.WriteLine("\nSelecione uma opção:");
+            Console.WriteLine("1 = Cadastro de heróis");
+            Console.WriteLine("2 = Seleção de equipe");
+            Console.WriteLine("3 = Exibição da equipe");
+            Console.WriteLine("4 = Sair");
+
+            if (int.TryParse(Console.ReadLine(), out int opcao))
+            {
+                switch (opcao)
+                {
+                    case 1:
+                        CadastroHerois();
+                        break;
+                    case 2:
+                        SelecaoEquipe();
+                        break;
+                    case 3:
+                        ExibicaoEquipe();
+                        break;
+                    case 4:
+                        exit = true;
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida, tente novamente.");
+                        break;
+                }
+            }
+        }
+    }
+      
+      static void CadastroHerois(){
+          
+     Console.WriteLine("\nVocê selecionou a Opção Cadastro de heróis");
+
+      for(int i=0 ; i<5 ; i++){
+        Console.WriteLine("Digite o nome do heroi: ");
+        Heroi[i].nome = Console.ReadLine();
+        Console.WriteLine("Digite o poder do heroi: ");
+        Heroi[i].poder = Console.ReadLine();
+        Console.WriteLine("Digite a pontuação do heroi: ");
+        Heroi[i].pontuacao = int.Parse(Console.ReadLine());
+      }
+    }
+      static void SelecaoEquipe()
+    {
+        Console.WriteLine("\nVocê selecionou a Opção SeleCão de equipe");
+
+        Console.WriteLine("Lista de Heróis Cadastrados:");
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Nome: {Heroi[i].nome}, Poder: {Heroi[i].poder}, Pontuação: {Heroi[i].pontuacao}");
+        }
+
+
+    }
+ 
+       static void ExibicaoEquipe(){
+        Console.WriteLine("Você selecionou a Opção Exibição da equipe");
+        calcularPontuacaoTotal();   
+       }
+       
+        static void calcularPontuacaoTotal(){
+
+        }
+ 
+  }
+
+#include <iostream>
+#include <array>
+struct Livro{
+std::string Titulo;
+std::string Autor;
+int AnoPublicacao;
+int NumeroPaginas;
+int Preco;
+};
+
+int main()
+{
+int PrecoTotal=0;
+int MediaPaginas=0;
+int MediaPaginasFinal;
+
+std::array<Livro, 3> livros;
+for(int i=0 ; i<3 ; i++){
+std::cout << "Insira o título do livro: ";
+std::cin.ignore();
+std::getline(std::cin, livros[i].Titulo);
+        
+std::cout << "Insira o autor do livro: ";
+std::getline(std::cin, livros[i].Autor);
+
+std::cout << "Insira o ano de publicação do livro: ";
+std::cin >> livros[i].AnoPublicacao;
+
+std::cout << "Insira o numero de páginas do livro: ";
+std::cin >> livros[i].NumeroPaginas;
+
+std::cout << "Insira o preço do livro: ";
+std::cin >> livros[i].Preco;
+}
+PrecoTotal = livros[0].Preco + livros[1].Preco + livros[2].Preco;
+MediaPaginas = livros[0].NumeroPaginas + livros[1].NumeroPaginas + livros[2].NumeroPaginas;
+MediaPaginasFinal = MediaPaginas / 3;
+ 
+ std::cout<<"O preço total dos livros é de " << PrecoTotal << " reais " <<  std::endl;
+ std::cout<<"A media de paginas dos livros é de " << MediaPaginasFinal << " páginas "  << std::endl;
+
+return 0;
+}
+
+using System;
+
+ public struct compras{
+ public string nome;
+ public int codigo;
+ public int preco;
+ public int quantidade;
+ } 
+
+class HelloWorld {
+  static void Main() {
+      int total=0;
+      
+      compras[] itens = new compras[3];
+      
+      for(int i=0 ; i<3 ; i++){
+        Console.WriteLine("Digite o nome do produto: ");
+        itens[i].nome = Console.ReadLine();
+        Console.WriteLine("Digite o código do produto: ");
+        itens[i].codigo = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite o preço do produto: ");
+        itens[i].preco = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite a quantidade de produto(s): ");
+        itens[i].quantidade = int.Parse(Console.ReadLine());
+      }
+      total= itens[0].preco * itens[0].quantidade + itens[1].preco * itens[1].quantidade + itens[2].preco * itens[2].quantidade;
+      Console.WriteLine("O valor total em estoque é:" + total);
+  }
+}
